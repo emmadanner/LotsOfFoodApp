@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using todo_dannerec.Data;
+using LotsOfFoodApp;
+using LotsOfFoodApp.Data;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using todo_dannerec.Models;
-using todo_dannerec;
+using LotsOfFoodApp.Models;
 
-namespace todo_dannerec.Views
+namespace LotsOfFoodApp.Views
 {
-    public partial class TodoItemPage : ContentPage
+    public partial class FoodItemPage : ContentPage
     {
-        public TodoItemPage()
+        public FoodItemPage()
         {
             InitializeComponent();
         }
         async void OnSaveClicked(object sender, EventArgs e)
         {
-            var todoItem = (TodoItem)BindingContext;
+            var todoItem = (FoodItem)BindingContext;
             // TodoItemDatabase database = await TodoItemDatabase.Instance;
             await App.Database.SaveItemAsync(todoItem);
             await Navigation.PopAsync();
         }
         async void OnDeleteClicked(object sender, EventArgs e)
         {
-            var todoItem = (TodoItem)BindingContext;
-            //TodoItemDatabase database = await TodoItemDatabase.Instance;
+            var todoItem = (FoodItem)BindingContext;
             await App.Database.DeleteItemAsync(todoItem);
             await Navigation.PopAsync();
         }
