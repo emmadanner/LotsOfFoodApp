@@ -8,15 +8,15 @@ namespace todo_dannerec
 {
     public partial class App : Application
     {
-        private static TodoItemDatabase database;
-        internal static TodoItemDatabase Database
+        private static AppDatabase database;
+        internal static AppDatabase Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new TodoItemDatabase(Path.Combine(Environment.GetFolderPath
-                    (Environment.SpecialFolder.LocalApplicationData), "TodoListItems.db3"));
+                    database = new AppDatabase(Path.Combine(Environment.GetFolderPath
+                    (Environment.SpecialFolder.LocalApplicationData), "MenuItems.db3"));
                 }
                 return database;
             }
@@ -24,7 +24,7 @@ namespace todo_dannerec
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new TodoListPage());
+            MainPage = new NavigationPage(new MenuPage());
         }
         protected override void OnStart()
         {
