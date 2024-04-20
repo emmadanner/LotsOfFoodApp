@@ -1,10 +1,8 @@
 ﻿using System;
-using todo_dannerec.Data;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using System.IO;
-using todo_dannerec.Views;
 using todo_dannerec.Data;
+using todo_dannerec.Views;
+using Xamarin.Forms;
 
 namespace todo_dannerec
 {

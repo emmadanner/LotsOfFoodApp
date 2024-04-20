@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using todo_dannerec.Data;
 using todo_dannerec.Models;
-using todo_dannerec;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace todo_dannerec.Views
 {
